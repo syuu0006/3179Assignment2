@@ -74,9 +74,9 @@
             ],
             "range": [
               "darkgrey",
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
+              "purple",
+              "darkorange",
+              "darkred",
               "green",
               "blue",
               "red"
