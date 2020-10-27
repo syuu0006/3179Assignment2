@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width":1100,
+  "height":500,
+  "data": {"url": "https://raw.githubusercontent.com/syuu0006/hw9/main/data/FIT3179dataset.csv"},
+  "mark":"bar",
+  "encoding": {
+    "tooltip": [
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title":"Number of Countries"
+      }
+    ],
+    "x": {
+      "bin": {"maxbins":25},
+      "field": "Score",
+      "title":"Happiness Score"
+    },
+    "y": {
+      "aggregate": "count",
+      "title":"Number of Countries"
+    }
+  }
+}
