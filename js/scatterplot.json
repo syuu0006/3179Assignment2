@@ -39,7 +39,13 @@
               "red"
             ]
           }
-        }
+        },
+      "tooltip":[
+        {"field":"Region","type":"nominal"},
+        {"field":"Country", "type": "nominal"},
+        {"field": {"repeat": "repeat"}, "type": "quantitative"},
+        {"field":"Score","type": "quantitative"}
+      ]
     }
   },
   "columns": 3
