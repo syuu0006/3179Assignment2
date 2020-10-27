@@ -2,13 +2,56 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background":"aliceblue",
   "repeat": ["GDP per capita","Perceptions of corruption", "Generosity", "Freedom to make life choices", "Healthy life expectancy","Social support"],
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "NORTHERN_AMERICA",
+          "LATIN",
+          "EUROPE",
+          "AFRICA",
+          "ASIA",
+          "OCEANIA",
+          "NEAR_EAST"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "Latin",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania",
+          "Near East"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Region == Continent_selection"
+    }
+  ],
   "spec":{
     "data": {
     "url": "https://raw.githubusercontent.com/syuu0006/hw9/main/data/FIT3179dataset.csv"
   },
-  "mark":"point",
-  "width":270,
-  "height":270,
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Region"],
+          "bind": "legend"
+        }
+      },
+      "mark":"point",
+      "width":270,
+      "height":270,
   "encoding": {
     "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
       "y": {
@@ -30,7 +73,7 @@
               "NEAR_EAST"
             ],
             "range": [
-              "#e41a1c",
+              "darkgrey",
               "#984ea3",
               "#ff7f00",
               "#a6cee3",
@@ -40,6 +83,10 @@
             ]
           }
         },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
       "tooltip":[
         {"field":"Region","type":"nominal"},
         {"field":"Country", "type": "nominal"},
@@ -47,6 +94,8 @@
         {"field":"Score","type": "quantitative"}
       ]
     }
-  },
-  "columns": 3
+  }
+]
+},
+"columns": 3
 }
