@@ -89,10 +89,10 @@
               "NEAR_EAST"
             ],
             "range": [
-              "#e41a1c",
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
+              "darkgrey",
+              "purple",
+              "darkorange",
+              "darkred",
               "green",
               "blue",
               "red"
