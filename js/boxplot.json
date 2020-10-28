@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background":"#f7f9fc",
-  "width":700,
-  "height":450,
+  "width":600,
+  "height":400,
   "data": {"url": "https://raw.githubusercontent.com/syuu0006/hw9/main/data/FIT3179dataset.csv"},
   "mark":{"type":"boxplot",
           "extent":"min-max"
