@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "background":"aliceblue",
+  "background":"#f7f9fc",
   "repeat": ["GDP per capita","Perceptions of corruption", "Generosity", "Freedom to make life choices", "Healthy life expectancy","Social support"],
   "params": [
     {
