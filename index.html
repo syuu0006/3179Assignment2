@@ -79,6 +79,9 @@
     </div>
     <!-- end pure grid group -->
 
+
+
+
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-1">
@@ -87,13 +90,34 @@
             <p> This chart shows to what extent different factor is affecting on people's happiness. </p>
             <p> Factors include GDP per capita, Perceptions of corruption, Generosity, Freedom to make life choices, Healthy life expectancy and Social support. </p>
             <p> Each point indicates a single country and different colours represent they belong to different continents. </p>
+            <p> Try to use the selection filter to see data for a particular contient.</p>
           </div>
         </div>
         <div class="pure-u-1-1">
           <div id="vis3"  class="vis-container"></div>
+          <p></p>
         </div>
     </div>
     <!-- end pure grid group -->
+
+   
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-middle">
+            <h2>                     Happiness Score vs. GDP vs. Population           </h2>
+            <p> This bubble chart can help you get a general idea of how GPD affects People's happiness as well as help you discover the happiness level of countries in different continent with different level of population. </p>
+            <p>Try to use the selection filter to see data for a particular contient.</p>
+          </div>
+        </div>
+        <div class="pure-u-1-1">
+          <div id="vis2"  class="vis-container"></div>
+          <p></p>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+
 
     <!-- pure grid group -->
     <div class="pure-g">
@@ -112,27 +136,24 @@
     </div>
     <!-- end pure grid group -->
   
-   
-   
-    <!-- pure grid group -->
+ 
+       <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div class="header header-middle">
-          <h2>Happiness Score vs. GDP vs. Population</h2>
-        </div>
-      </div>
       <div class="pure-u-2-3">
-        <div id="vis2"  class="vis-container"></div>
-      </div>
+        <div id="vis5"  class="vis-container"></div>
+      </div>  
       <div class="pure-u-1-3">
-        <div class="description description-right">
-          <p> This bubble chart can help you get a general idea of how GPD affects People's happiness as well as help you discover the happiness level of countries in different continent with different level of population.  </p>
-          <p> Try to use the selection filter to see data for a particular contient.</p>
+        <div class="description description-left">
+          <h2>Happiness Score for Continents</h2>
+          <p> This chart will illustrate statistic property of Happiness Score for different continent </p>
+          <p> The boxes display the “minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum” Happiness Score for countries within different continents. </p>
+          <p> Hover over the boxes to check the accurate value for each continent. </p>
         </div>
       </div>
     </div>
     <!-- end pure grid group -->
-   
+    
+    
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
         <p>This visualisation is created by <a href="https://github.com/syuu0006" target="_blank">Sijia Yu</a>.</p>
@@ -147,6 +168,7 @@
   var specVis2= "./js/bubbleChart.json";
   var specVis3= "./js/scatterplot.json"; 
   var specVis4= "./js/symbol_map.json";
+  var specVis5= "./js/boxplot.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -163,6 +185,11 @@
   vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
 </script>
 </body>
 </html>
