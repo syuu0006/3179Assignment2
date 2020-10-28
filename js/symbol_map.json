@@ -3,7 +3,7 @@
   "title": "GDP per capita for Countries",
   "width": 600,
   "height": 450,
-  "background": "aliceblue",
+  "background": "#f7f9fc",
   "data": {
     "url": "https://raw.githubusercontent.com/syuu0006/hw9/main/js/ne_110m_admin_0_countries.json",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
