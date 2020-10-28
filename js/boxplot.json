@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "background":"aliceblue",
+  "width":600,
+  "height":400,
+  "data": {"url": "https://raw.githubusercontent.com/syuu0006/hw9/main/data/FIT3179dataset.csv"},
+  "mark":{"type":"boxplot",
+          "extent":"min-max"
+  },
+  "encoding": {
+    "x":{
+      "field":"Region",
+      "type":"nominal",
+      "title":"Continent"
+    },
+    "y":{
+      "field":"Score",
+      "type":"quantitative",
+      "title":"Happiness Score"
+    }
+  }
+}
